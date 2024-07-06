@@ -2,7 +2,7 @@
 import { usePathname, useRouter } from "next/navigation";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import { Menu } from "lucide-react";
-import { NavButton } from "./nav-button";
+import { NavButton } from "@/components/nav-button";
 import { useMedia } from "react-use"
 import { useState } from "react";
 import { Button } from "./ui/button";
