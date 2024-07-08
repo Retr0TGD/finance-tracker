@@ -4,10 +4,10 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { insertAccountsSchema } from "@/db/schema";
+import { insertAccountSchema } from "@/db/schema";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 
-const formSchema = insertAccountsSchema.pick({
+const formSchema = insertAccountSchema.pick({
     name: true,
 });
 
