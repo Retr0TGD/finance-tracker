@@ -4,14 +4,24 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { insertAccountSchema } from "@/db/schema";
+import { insertTransactionSchema } from "@/db/schema";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 
-const formSchema = insertAccountSchema.pick({
-    name: true,
+const formSchema = z.object({
+    date: z.coerce.date(),
+    accountId: z.string(),
+    categoryId: z.string().nullable().optional(),
+    payee: z.string(),
+    amount: z.string(),
+    notes: z.string().nullable().optional(),
+});
+
+const apiSchema = insertTransactionSchema.omit({
+    id: true,
 });
 
 type FormValues = z.input<typeof formSchema>;
+type ApiFormValues = z.input<typeof apiSchema>;
 type Props = {
     id?: string;
     defaultValues?: FormValues;
@@ -20,7 +30,7 @@ type Props = {
     disabled?: boolean;
 };
 
-export const AccountForm = ({id, defaultValues, onSubmit, onDelete, disabled}: Props) => {
+export const TransactionForm = ({id, defaultValues, onSubmit, onDelete, disabled}: Props) => {
     const form = useForm<FormValues>({
         resolver: zodResolver(formSchema),
         defaultValues: defaultValues,
