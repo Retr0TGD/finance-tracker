@@ -1,5 +1,5 @@
 import { Hono } from "hono";
-import { z } from "Zod";
+import { z } from "zod";
 import { db } from "@/db/drizzle";
 import { and, eq, inArray } from "drizzle-orm";
 import { createId } from "@paralleldrive/cuid2";

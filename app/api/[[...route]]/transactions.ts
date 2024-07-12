@@ -1,6 +1,6 @@
 import { Hono } from "hono";
 import { parse, subDays } from "date-fns";
-import { z } from "Zod";
+import { z } from "zod";
 import { db } from "@/db/drizzle";
 import { and, sql, desc, eq, gte, lte, inArray } from "drizzle-orm";
 import { createId } from "@paralleldrive/cuid2";

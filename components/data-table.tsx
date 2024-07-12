@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import * as React from "react"
 import {
@@ -44,7 +44,7 @@ export function DataTable<TData, TValue>({
 }: DataTableProps<TData, TValue>) {
   const [ConfirmDialog, confirm] = useConfirm(
     "Are you sure",
-    "You are about to delete the account(s)"
+    "You are about to perfom a bulk delete"
   )
   const [sorting, setSorting] = React.useState<SortingState>([])
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
