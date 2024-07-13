@@ -31,11 +31,11 @@ export const EditCategorySheet = () => {
     const isLoading = categoryQuery.isLoading;
 
     const onSubmit = (values: FormValues) => {
-        editMutation.mutate(values), {
+        editMutation.mutate(values, {
             onSuccess: () => {
                 onClose();
             },
-        };
+        });
     };
 
     const onDelete = async () => {

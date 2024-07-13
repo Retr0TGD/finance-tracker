@@ -31,11 +31,11 @@ export const EditAccountSheet = () => {
     const isLoading = accountQuery.isLoading;
 
     const onSubmit = (values: FormValues) => {
-        editMutation.mutate(values), {
+        editMutation.mutate(values, {
             onSuccess: () => {
                 onClose();
             },
-        };
+        });
     };
 
     const onDelete = async () => {

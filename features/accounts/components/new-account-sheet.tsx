@@ -15,11 +15,11 @@ export const NewAccountSheet = () => {
     const { isOpen, onClose } = useNewAccount();
     const mutation = useCreateAccount();
     const onSubmit = (values: FormValues) => {
-        mutation.mutate(values), {
+        mutation.mutate(values, {
             onSuccess: () => {
                 onClose();
             },
-        };
+        });
     };
 
     return(

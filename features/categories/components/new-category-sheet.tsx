@@ -15,11 +15,11 @@ export const NewCategorySheet = () => {
     const { isOpen, onClose } = useNewCategory();
     const mutation = useCreateCategory();
     const onSubmit = (values: FormValues) => {
-        mutation.mutate(values), {
+        mutation.mutate(values, {
             onSuccess: () => {
                 onClose();
             },
-        };
+        });
     };
 
     return(

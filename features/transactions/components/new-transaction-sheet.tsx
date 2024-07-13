@@ -48,11 +48,11 @@ export const NewTransactionSheet = () => {
     const isLoading = categoryQuery.isLoading || accountQuery.isLoading;
 
     const onSubmit = (values: FormValues) => {
-        createMutation.mutate(values), {
+        createMutation.mutate(values, {
             onSuccess: () => {
                 onClose();
             },
-        };
+        });
     };
 
     return(
