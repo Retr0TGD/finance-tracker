@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 import { ImportTable } from "./import-table";
 import { convertAmountToMiliunits } from "@/lib/utils";
 
-const dateFormat = "dd-MM-yyyy HH:mm:ss";
-const outputFormat = "dd-MM-yyyy";
+const dateFormat = "yyyy-MM-dd HH:mm:ss";
+const outputFormat = "yyyy-MM-dd";
 
 const requiredOptions = [
     "amount",
