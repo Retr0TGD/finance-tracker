@@ -3,11 +3,13 @@ import { handle } from "hono/vercel";
 import accounts from "./accounts";
 import catergories from "./categories"
 import transactions from "./transactions";
+import summary from "./summary";
 
 export const runtime = "edge";
 
 const app = new Hono().basePath('/api')
 const routes = app
+    .route("/summary", summary)
     .route("/accounts", accounts)
     .route("/categories", catergories)
     .route("/transactions", transactions);
