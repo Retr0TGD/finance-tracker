@@ -61,8 +61,8 @@ const app = new Hono().get("/", clerkMiddleware(), zValidator("query", z.object(
     );
     const [lastPeriod] = await fetchFinancialData(
         auth.userId,
-        startDate,
-        endDate,
+        lastPeriodStart,
+        lastPeriodEnd,
     );
 
     const incomeChange = calculatePercentageChange(
