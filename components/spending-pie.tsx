@@ -65,7 +65,7 @@ export const SpendingPie = ({ data = [] }:Props) => {
                     <div className="flex flex-col gap-y-4 items-center justify-center h-[350px] w-full">
                         <FileSearch className="size-6 text-muted-foreground" />
                         <p className="text-muted-foreground text-sm">
-                            No dta for this period
+                            No data for this period
                         </p> 
                     </div>
                 ) : (
